@@ -1,11 +1,80 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <title>HELLO WORLD</title>
+  <meta headset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>후라이 종합 지원 툴</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800');
+
+    body {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("project/common/background.jpg");
+      background-size: cover;
+      font-family: 'Nanum Gothic';
+      color: white;
+      margin: 0;
+      animation: fadein 0.5s;
+    }
+
+    br {
+      content: '\A';
+      display: contents;
+      white-space: pre;
+    }
+
+    #wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    .rounded {
+      background: blueviolet;
+      height: 50px;
+      width: 300px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+    }
+
+    @keyframes fadein {
+      0% {
+        opacity: 0;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>HELLO WORLD3</h1>
+  <div id="wrapper">
+    <h1>탈덕한 그대들을 위한 헌정방송, 후라이</h1>
+    <h2>종합 지원 툴</h2>
+    <div id="linkRoulette" class="rounded">돌림판</div>
+    <div id="linkTarot" class="rounded">타로방송 지원 툴</div>
+  </div>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <script defer>
+    $("#linkRoulette").click(function () {
+      window.open("./project/roulette/test.html", "_blank");
+    });
+    $("#linkTarot").click(function () {
+      window.open("./project/tarot/HuraiTarotSupport.html", "_blank");
+    });
+  </script>
 </body>
 
 </html>
